@@ -1,0 +1,302 @@
+{
+  "info": {
+    "_postman_id": "eaa54219-8663-4a5c-ad66-d24e41f75b45",
+    "name": "Cyber Security",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "22324216"
+  },
+  "item": [
+    {
+      "name": "add-parties",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-key",
+            "value": "cyber123",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"name\": \"Chandekar Hemang\",\r\n        \"phone_number\": \"8238403910\",\r\n        \"email\": \"hemang@gmail.com\",\r\n        \"gst_number\": \"8238403910\",\r\n        \"address\": \"Thlatej\",\r\n        \"pan_number\": \"CDUPC7411\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/add-parties",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "add-parties"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "list-parties",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-key",
+            "value": "cyber123",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"search\" : \"\",\r\n   \"page\":\"2\",\r\n   \"perPage\":\"10\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/list-parties",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "list-parties"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "edit-parties",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-key",
+            "value": "cyber123",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"party_id\":\"5\",\r\n   \"name\": \"Chandekar Hemang Prakashbai\",\r\n    \"phone_number\": \"7894561237\",\r\n    \"email\": \"hemang@gmail.com\",\r\n    \"gst_number\": \"gst_1234gstDWZ\",\r\n    \"address\": \"Thlatej\",\r\n    \"pan_number\": \"CDUPC7411\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/edit-parties",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "edit-parties"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "details-parties",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-key",
+            "value": "cyber123",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"party_id\":\"7\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/details-parties",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "details-parties"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "add-sales",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-key",
+            "value": "cyber123",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"invoice_number\": \"123\",\r\n    \"date\":\"21-07-2001\",\r\n    \"vc_type\":\"sale\",\r\n    \"vc_number\":\"123465\",\r\n    \"document_number\":\"123456\",\r\n    \"document_date\":\"21-07-2001\",\r\n      \"taxable\":\"500\",\r\n      \"IGST\":\"600\",\r\n      \"CGST\":\"\",\r\n      \"SGST\":\"100\",\r\n      \"TAX\":\"5000\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/sales/add-sales",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "sales",
+            "add-sales"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "edit-sales",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-key",
+            "value": "cyber123",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"sales_id\":\"2\",\r\n   \"invoice_number\": \"123456\",\r\n    \"date\":\"21-07-2001\",\r\n    \"vc_type\":\"service\",\r\n    \"vc_number\":\"123465\",\r\n    \"document_number\":\"123456\",\r\n    \"document_date\":\"21-07-2001\",\r\n      \"taxable\":\"500\",\r\n      \"IGST\":\"600\",\r\n      \"CGST\":\"\",\r\n      \"SGST\":\"100\",\r\n      \"TAX\":\"800000\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/sales/edit-sales",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "sales",
+            "edit-sales"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "details-sales",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-key",
+            "value": "cyber123",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"sales_id\":\"2\",\r\n   \"invoice_number\": \"123456\",\r\n    \"date\":\"21-07-2001\",\r\n    \"vc_type\":\"service\",\r\n    \"vc_number\":\"123465\",\r\n    \"document_number\":\"123456\",\r\n    \"document_date\":\"21-07-2001\",\r\n      \"taxable\":\"500\",\r\n      \"IGST\":\"600\",\r\n      \"CGST\":\"\",\r\n      \"SGST\":\"100\",\r\n      \"TAX\":\"800000\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/sales/details-sales",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "sales",
+            "details-sales"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "list-sales",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-key",
+            "value": "cyber123",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"search\" : \"\",\r\n   \"page\":\"2\",\r\n   \"perPage\":\"10\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/sales/list-sales",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "sales",
+            "list-sales"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
