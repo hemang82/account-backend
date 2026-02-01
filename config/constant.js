@@ -10,17 +10,28 @@ const CONSTANT = {
     // --------------------------------- API_CODE -----------------------------------
 
     API_CODE: {
-        SUCCESS: 1,
-        INTERNAL_ERROR: 0,
-        VALIDATION_ERROR: 0,
-        UNAUTHORIZED: -1,
-        INACTIVE: 3,
-        NOT_FOUND: 2,
-        ERROR: 0,
-        PROFILE_SCREEN: 11,
-        ABOUT_SCREEN: 12,
-        PROFILE_TYPE_SCREEN: 13
+        SUCCESS: 200,
+        ERROR: 550,
+        VALIDATION_ERROR: 400,
+        ACCESS_TOKEN_EXPIRE: 403,
+        INACTIVE: 423,
+        NOT_FOUND: 404,
+        INTERNAL_ERROR: 500,
+        UNAUTHORIZED: 401,
+        REFRESH_TOKEN_EXPIRED: 410,
+        CREATED: 201
     },
+
+    // SUCCESS: 1,
+    //     INTERNAL_ERROR: 0,
+    //     VALIDATION_ERROR: 0,
+    //     UNAUTHORIZED: -1,
+    //     INACTIVE: 3,
+    //     NOT_FOUND: 2,
+    //     ERROR: 0,
+    //     PROFILE_SCREEN: 11,
+    //     ABOUT_SCREEN: 12,
+    //     PROFILE_TYPE_SCREEN: 13
 
     // --------------------------------- API_VALIDATION_RULES -----------------------------------
 
@@ -76,6 +87,7 @@ const CONSTANT = {
         GENDER: "in:male,female,other",
 
     },
+
 }
 
 module.exports = CONSTANT;
